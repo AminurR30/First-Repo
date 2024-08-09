@@ -1,0 +1,519 @@
+* {
+  margin: 0px;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+/* ########################################################################### */
+/* ============================ SCROLLBAR - START ============================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(195, 193, 193);
+  border-radius: 20px;
+  border: 2px solid gray;
+}
+/* ============================ SCROLLBAR - END ============================ */
+
+/* =========================== HEADINGS - START =========================== */
+.heading-1 {
+  color: white;
+  font-size: 40px;
+}
+.header-text {
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.sub-heading {
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 0px 0 8px rgba(0, 0, 0, 0.482);
+}
+
+.super-sub-heading {
+  font-size: 22px;
+}
+.copyright-text {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 0px;
+}
+/* =========================== HEADINGS - END =========================== */
+
+/* ========================== GENERAL CLASSES - START ========================== */
+
+.container {
+  padding: 10px 10%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 0;
+
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-container button {
+  background-color: #575f65;
+  color: white;
+  border-radius: 15px;
+  width: 280px;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 80px;
+
+  font-size: 25px;
+}
+@media screen and (max-width: 640px) {
+  .heading-1 {
+    font-size: 25px;
+  }
+  .flex-container button {
+    background-color: #575f65;
+    color: white;
+    border-radius: 15px;
+    width: 180px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+  }
+}
+.flex-container button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  box-shadow: 0 2px 5px white;
+}
+
+.bg-dark-gradient {
+  background: radial-gradient(
+    83.23% 420.06% at 12.89% 33.8%,
+    #000000 0%,
+    #373a49 100%
+  );
+}
+
+.tribullet {
+  width: 15px;
+  height: 20px;
+  background: black;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  margin-right: 10px;
+}
+/* ========================== GENERAL CLASSES - END ========================== */
+
+/* ============================== NAVBAR - START ============================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+.navbar ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: rgb(122, 106, 106);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 0 10px;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* ============================== NAVBAR - END ============================== */
+
+/* ============================ HEROAREA - START ============================ */
+.hero {
+  padding: 30px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  gap: 100px 20px;
+  display: flex;
+}
+
+.hero-text {
+  margin-top: 10%;
+}
+.slider {
+  display: flex;
+  background: gray;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 55%;
+  min-width: 200px;
+  height: 100%;
+  min-height: 100px;
+}
+.slider img {
+  width: 100%;
+}
+.linker {
+  color: rgb(9, 168, 253);
+  font-size: 20px;
+}
+.linker:hover {
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(9, 168, 253, 0.535);
+}
+@media screen and (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+  }
+  .slider {
+    width: 70%;
+  }
+  .hero-text {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+/* ============================ HEROAREA - END ============================ */
+
+/* ============================== INFO - START ============================== */
+.info {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  gap: 20px;
+  width: 100%;
+  height: 500px;
+}
+
+.info .info-left {
+  background-color: gray;
+
+  height: 100%;
+  flex: 1 0 300px;
+}
+
+.info .info-right {
+  overflow-y: scroll;
+  padding-right: 10px;
+  height: 100%;
+  flex: 7 1 auto;
+}
+.info .info-right .content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.info .info-right::-webkit-scrollbar-track {
+  background: rgb(233, 233, 233);
+}
+
+.info .info-right::-webkit-scrollbar-thumb {
+  border: 2px solid gray;
+}
+.gap-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info .info-right .content-box .heading {
+  font-size: 50px;
+  text-shadow: 8px 0 10px rgba(0, 0, 0, 0.685);
+}
+.info .info-right .content-box .main-text {
+  font-size: 18px;
+}
+
+.ul-points {
+  list-style: circle outside circle;
+}
+.ul-points li {
+  margin: 10px;
+}
+.ol-points {
+  list-style-type: decimal;
+}
+.ol-points li {
+  margin: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .info {
+    padding: 20px 10%;
+    height: auto;
+  }
+  .info .info-right {
+    overflow-y: auto;
+  }
+  .info .info-right .content-box .heading {
+    font-size: 35px;
+    text-shadow: 0px 0 8px rgba(0, 0, 0, 0.482);
+  }
+  .info .info-right .content-box .main-text {
+    font-size: 16px;
+  }
+  .info .info-right .content-box .sub-heading {
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 0px 0 4px rgba(0, 0, 0, 0.482);
+  }
+}
+/* ============================== INFO - END ============================== */
+
+/* ============================== FOOTER - START ============================== */
+.footer-image {
+  color: white;
+  height: 25px;
+  width: 25px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.footer-image:hover {
+  text-shadow: 10px 10px 10px white;
+}
+
+.footer {
+  background-color: #282828;
+}
+/* ============================== FOOTER - END ============================== */
+
+/* ===================== BUTTON - START ===================== */
+
+.get_started_btn {
+  background: black;
+  padding: 20px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 0 0 black;
+}
+.get_started_btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 30px 5px -5px rgba(0, 0, 0, 0.509);
+}
+.btn-black {
+  margin-block-end: 5px;
+}
+
+.btn-black button {
+  padding: 14px 14px;
+  border-radius: 18px;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.btn-black button:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+.btn-gray {
+  padding: 20px 10px;
+}
+.btn-gray button {
+  padding: 14px 14px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 transparent;
+}
+.btn-gray button:hover {
+  box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.602),
+    0 2px 10px -2px rgba(41, 41, 41, 0.608);
+}
+
+.btn-blue {
+  padding: 20px 10px;
+}
+
+.btn-blue button {
+  padding: 14px 14px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(41, 102, 243);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 transparent;
+}
+.btn-blue button:hover {
+  box-shadow: 0 8px 10px -2px rgba(41, 102, 243, 0.916),
+    0 2px 10px -2px rgba(41, 102, 243, 0.488);
+}
+
+.newbutton button {
+  padding: 14px 14px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 21px;
+  margin: 0 3px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.newbutton button:hover {
+  color: black;
+  background-color: white;
+}
+@media screen and (max-width: 640px) {
+  .btn-gray,
+  .btn-blue {
+    padding: 10px 5px;
+  }
+  .btn-gray button,
+  .btn-blue button {
+    font-size: 14px;
+  }
+}
+
+/* --------------------------------------------------------------Part3---------------------------------------------------------- */
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-13xl: 32px;
+  --font-size-33xl: 52px;
+  --font-size-lg: 18px;
+  --font-size-50xl: 69px;
+  --font-size-6xl: 25px;
+  --font-size-75xl: 94px;
+
+  /* Colors */
+  --color-lavenderblush: #fef2f2;
+  --color-gray: #2c0600;
+  --color-dimgray: #575757;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-deepskyblue: #00d1ff;
+
+  /* Gaps */
+  --gap-51xl: 70px;
+  --gap-21xl: 40px;
+  --gap-xl: 20px;
+  --gap-3xs: 10px;
+  --gap-11xs: 2px;
+
+  /* Paddings */
+  --padding-9xs: 4px;
+  --padding-41xl: 60px;
+  --padding-3xs: 10px;
+  --padding-7xs: 6px;
+  --padding-sm: 14px;
+  --padding-23xl: 42px;
+  --padding-xl: 20px;
+  --padding-51xl: 70px;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-81xl: 100px;
+  --br-11xl: 30px;
+  --br-65xl: 84px;
+
+  /* Effects */
+  --cta-enabled: 0px 0.3px 3px rgba(0, 0, 0, 0.04),
+    0px 2.8px 9px rgba(0, 0, 0, 0.19);
+}
+
+/* ===================== BUTTON - END ===================== */
+/* ######################################################## */
